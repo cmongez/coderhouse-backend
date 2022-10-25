@@ -5,8 +5,8 @@ const app = express();
 app.set('views', './views');
 app.set('view engine', 'pug');
 
-app.get('/hello', (req, res) => {
-  res.render('hello.pug', { mensaje: 'Usando pug js en Express' });
+app.get('/datos', (req, res) => {
+  const params = req.query;
+  res.render('nivel', params);
 });
-
 app.listen(8080);
